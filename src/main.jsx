@@ -12,6 +12,7 @@ import Contact from './components/Contact/Contact.jsx'
 import { Route } from 'react-router-dom'
 import User from './components/User/User.jsx'
 import Github from './components/Github/Github.jsx'
+import Discord from './components/Discord/Discord.jsx'
 import { githubInfoLoader } from './components/Github/Github.jsx'
 // const router = createBrowserRouter([
 //   {
@@ -48,8 +49,10 @@ const router = createBrowserRouter(
         loader={githubInfoLoader}
         path='github'
         element={<Github />} />
-    </Route>
+      <Route path='github' element={<Github />} />
+      <Route path='discord' element={<Discord />} />
 
+    </Route>
   )
 )
 
